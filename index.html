@@ -1,236 +1,404 @@
-<!DOCTYPE html>
-<html lang="en">
 
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
+   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./assets/images/1481H-F.jpeg" type="image/x-icon">
     <title>Fehy-Mitantsoa.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  
 </head>
-
 <body>
-    <!-- Header -->
-   
-    <section id="header">
-        <div class="header container">
-            <div class="nav-bar">
-                <div class="brand">
-                    <a href="#hero">
-                        <h1><span>F</span>ehy <span>M</span>itantsoa</h1>
-                    </a>
-                </div>
-                <div class="nav-list">
-                    <div class="hamburger">
-                        <div class="bar"></div>
-                    </div>
-                    <ul>
-                        <li><a href="#hero" data-after="Home">Home</a></li>
-                        <li><a href="#services" data-after="Service">Services</a></li>
-                        <li><a href="#projects" data-after="Projects">Projets</a></li>
-                        <li><a href="#about" data-after="About">A propos</a></li>
-                        <li><a href="#contact" data-after="Contact">Contact</a></li>
-                        <!-------<li><a href="#contact" data-after="Contact">S'inscrire</a></li>------->
-                    </ul>
-                </div>
-            </div>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="logo"><span>F</span>ehy <span>M</span>itantsoa</a>
+  <ul class="nav-links">
+    <li><a href="#hero">Accueil</a></li>
+    <li><a href="#experience">Expérience</a></li>
+    <li><a href="#projects">Projets</a></li>
+    <li><a href="#devops">DevOps</a></li>
+    <li><a href="#about">À propos</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#hero" onclick="closeMenu()">Accueil</a>
+  <a href="#experience" onclick="closeMenu()">Expérience</a>
+  <a href="#projects" onclick="closeMenu()">Projets</a>
+  <a href="#devops" onclick="closeMenu()">DevOps</a>
+  <a href="#about" onclick="closeMenu()">À propos</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Disponible pour des missions</div>
+    <h1 class="hero-title">
+      <span class="line">Bonjour, je suis</span>
+      <span class="line accent">Fehy Mitantsoa</span>
+      <span class="line" style="font-size:0.55em; color:var(--muted); font-weight:400;">Développeur Fullstack & DevOps</span>
+    </h1>
+    <p class="hero-sub">Passionné par le développement web et les pratiques DevOps, je construis des applications robustes. Diplômé de l'École Nationale de l'Informatique de Fianarantsoa.</p>
+    <div class="hero-ctas">
+      <a href="#projects" class="btn btn-primary">Voir mes projets →</a>
+      <a href="./assets/cv fehy.pdf" download class="btn btn-outline">Télécharger mon CV</a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label">Parcours</div>
+    <h2 class="section-title">Expériences &amp; <span>Formations</span></h2>
+    <p class="section-desc">Mes stages et projets académiques réalisés durant ma formation à l'ENI.</p>
+    <div class="grid-2">
+
+      <div class="card">
+        <span class="tag tag-projet">Projet</span>
+        <div class="card-icon">🎓</div>
+        <h3>Plateforme de recherche d'emploi</h3>
+        <p>Projet de fin d'année 2025 à l'ENI (2 mois). Conception d'une plateforme complète avec ReactJS, ViteJS, Node.js, Express.js et MongoDB.</p>
+        
+      </div>
+
+      <div class="card">
+        <span class="tag tag-stage">Stage</span>
+        <div class="card-icon">🛡️</div>
+        <h3>Gendarmerie Nationale — Fianarantsoa</h3>
+        <p>Stage de 3 mois en 2024 au sein de l'État-Major de la Circonscription de la Gendarmerie Nationale. Gestion de systèmes d'information internes.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag tag-stage">Stage</span>
+        <div class="card-icon">🏢</div>
+        <h3>Société Lazan'ny Betsileo</h3>
+        <p>Stage de 2 mois en 2023 dans cette société de Fianarantsoa. Participation aux projets informatiques de l'entreprise.</p>
+      </div>
+
+      <div class="card">
+        <span class="tag tag-projet">Projet</span>
+        <div class="card-icon">💻</div>
+        <h3>Projet de fin d'année 2022</h3>
+        <p>Projet académique réalisé à l'École Nationale de l'Informatique pendant 2 mois. Développement et déploiement d'une application web.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" style="background:rgba(30,41,59,0.3)">
+  <div class="container">
+    <div class="section-label">Réalisations</div>
+    <h2 class="section-title">Mes <span>Projets</span></h2>
+    <p class="section-desc">Applications et systèmes développés au fil de ma formation et de mes stages.</p>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <h3 style="font-family:var(--font-head); font-weight:700; margin-bottom:0.4rem">Application Android Quiz</h3>
+        <p style="color:var(--muted); font-size:0.88rem; margin-bottom:0.5rem">Quiz interactif avec notations en temps réel et animations engageantes.</p>
+        <div class="project-tech">
+          <span class="tech-pill">Java Android</span><span class="tech-pill">XML Layouts</span>
         </div>
-    </section>
-    
+      </div>
 
-
-    <!-- Hero Section  -->
-    <section id="hero">
-        <div class="hero container">
-            <div>
-                <h1>Bonjour, <span></span></h1>
-                <h1>Je m'appele <span></span></h1>
-                <h1>Fehy <span></span></h1>
-                <a href="#projects" type="button" class="cta">Informaticien</a>
-            </div>
+      <div class="project-card">
+        <h3 style="font-family:var(--font-head); font-weight:700; margin-bottom:0.4rem">Gestion de Logement</h3>
+        <p style="color:var(--muted); font-size:0.88rem; margin-bottom:0.5rem">Plateforme de gestion immobilière avec authentification sécurisée et interface intuitive.</p>
+        <div class="project-tech">
+          <span class="tech-pill">PHP</span><span class="tech-pill">Laravel 10</span><span class="tech-pill">MySQL</span>
         </div>
-    </section>
-    <!-- End Hero Section  -->
+      </div>
 
-    <!-- Service Section -->
-    <section id="services">
-        <div class="services container">
-            <div class="service-top">
-                <h1 class="section-title">Serv<span>i</span>ces</h1>
-                <p></p>
-            </div>
-            <div class="service-bottom">
-                <div class="service-item">
-                    <div class="icon"><img src="./assets/icons/fehy.png" /></div>
-                    <h2>Projet</h2>
-                    <p>Fin de l'année 2025 à l'Ecole Nationale de l'Infomatique pendant deux (02) mois;créaction platforme recherche emploi avec ReactJS,ViteJS, NodeJS,ExpressJS et MogoDb. </p>
-                </div>
-                <div class="service-item">
-                    
-                    <div class="icon"><img src="./assets/icons/fehy.png" /></div>
-                    <h2>Stage</h2>
-                    <p>Au sein de l'Etat Major de la Circonscription de la Gendarmerie Nationale de Fianarantsoa pendant trois (03) mois en 2024.</p>
-                </div>
-                <div class="service-item">
-                    <div class="icon"><img src="./assets/icons/fehy.png" /></div>
-                    <h2>Stage</h2>
-                    <p>A la Sociéte Lazan'ny Betsileo Fianarantsoa pendant deux (02) mois en 2023.</p>
-                </div>
-                <div class="service-item">
-                    <div class="icon"><img src="./assets/icons/fehy.png" /></div>
-                    <h2>Projet</h2>
-                    <p>Fin de l'année 2022 à l'Ecole Nationale de l'Infomatique pendant deux (02) mois </p>
-                </div>
-                <div class="flex-item flex-item-stretch flex-column">
-                
+      <div class="project-card">
+        <h3 style="font-family:var(--font-head); font-weight:700; margin-bottom:0.4rem">Portfolio Personnel</h3>
+        <p style="color:var(--muted); font-size:0.88rem; margin-bottom:0.5rem">Site web de portefeuille avec animations, présentation de projets et formulaire de contact.</p>
+        <div class="project-tech">
+          <span class="tech-pill">HTML</span><span class="tech-pill">CSS</span><span class="tech-pill">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3 style="font-family:var(--font-head); font-weight:700; margin-bottom:0.4rem">Location de Voitures</h3>
+        <p style="color:var(--muted); font-size:0.88rem; margin-bottom:0.5rem">Gestion de flotte et locations avec fonctionnalité drag-and-drop et tri par priorité.</p>
+        <div class="project-tech">
+          <span class="tech-pill">JSP</span><span class="tech-pill">Java Servlet</span><span class="tech-pill">MySQL</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3 style="font-family:var(--font-head); font-weight:700; margin-bottom:0.4rem">Application de Chat</h3>
+        <p style="color:var(--muted); font-size:0.88rem; margin-bottom:0.5rem">Échange de messages multi-clients via un serveur Socket unique. Architecture client-serveur.</p>
+        <div class="project-tech">
+          <span class="tech-pill">Java</span><span class="tech-pill">Socket</span><span class="tech-pill">TCP/IP</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3 style="font-family:var(--font-head); font-weight:700; margin-bottom:0.4rem">Plateforme Emploi</h3>
+        <p style="color:var(--muted); font-size:0.88rem; margin-bottom:0.5rem">Application fullstack de mise en relation employeurs/candidats avec backend REST et frontend React.</p>
+        <div class="project-tech">
+          <span class="tech-pill">React</span><span class="tech-pill">Node.js</span><span class="tech-pill">MongoDB</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DEVOPS SECTION -->
+<section id="devops">
+  <div class="container">
+    <div class="section-label">Compétences Techniques</div>
+    <h2 class="section-title">Bases en <span>DevOps</span></h2>
+
+    <div class="devops-intro">
+      <div>
+        <p style="color:var(--muted); line-height:1.8; margin-bottom:1.5rem">En parallèle du développement fullstack, j'ai acquis des bases solides en pratiques DevOps : automatisation, conteneurisation et déploiement continu. Ces compétences me permettent de livrer des applications de bout en bout.</p>
+        <p style="color:var(--muted); line-height:1.8">Je maîtrise les outils essentiels du cycle de vie logiciel moderne — du code jusqu'à la mise en production.</p>
+      </div>
+      <div class="pipeline-diagram">
+        <div class="pipeline-title">Pipeline CI/CD typique</div>
+        <div class="pipeline-steps">
+          <div class="pip-step">
+            <div class="pip-box">📝 Code</div>
+            <div class="pip-label">Git push</div>
           </div>
-            </div>
+          <div class="pip-arrow">→</div>
+          <div class="pip-step">
+            <div class="pip-box">🔧 Build</div>
+            <div class="pip-label">Compilation</div>
+          </div>
+          <div class="pip-arrow">→</div>
+          <div class="pip-step">
+            <div class="pip-box">🧪 Test</div>
+            <div class="pip-label">Unit tests</div>
+          </div>
+          <div class="pip-arrow">→</div>
+          <div class="pip-step">
+            <div class="pip-box">🐳 Package</div>
+            <div class="pip-label">Docker image</div>
+          </div>
+          <div class="pip-arrow">→</div>
+          <div class="pip-step">
+            <div class="pip-box">🚀 Deploy</div>
+            <div class="pip-label">Production</div>
+          </div>
         </div>
-    </section>
-    <!-- End Service Section -->
+      </div>
+    </div>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="projects container">
-            <div class="projects-header">
-                <h1 class="section-title">Recent <span>Projects</span></h1>
-            </div>
-            <div class="all-projects">
-                <div class="project-item">
-                    <div class="project-info">
-                        <h1>Application Android Quiz</h1>
-                        <h2>Gérer l'expérience d'apprentissage</h2>
-                    <p>Un quiz dynamique qui remet les utilisateurs en question avec des questions interactives, des notations en temps réel et des animations engageantes. Construit avec Java android pour une expérience utilisateur transparente.</p>
-                    </div>
-                    <div class="project-img">
-                        <img src="./assets/icons/phone.png" alt="Interactive Quiz App">
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <h1>Site web pour gestion de logement</h1>
-                        <p>Une plate-forme gestion de logement entièrement fonctionnelle avec une interface utilisateur intuitive, des caisses sécurisées. Développé à l'aide de PHP, Laravel 10 et MySQL pour les mises à jour et l'authentification en temps réel.</p>
-                    </div>
-                    <div class="project-img">
-                        <img src="./assets/images/e-commerc-website" alt="E-Commerce Website">
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <h1>Site web du portefeuille</h1>
-                        <h2>Présentez notre travail</h2>
-                        <p>Un site web de portefeuille personnel magnifiquement conçu avec des animations, des points saillants du projet et un formulaire de contact. Construit en utilisant HTML, CSS et JavaScript pour créer une présentation accrocheuse.</p>
-                    </div>
-                    <div class="project-img">
-                        <img src="./assets/icons/demos.png" alt="Portfolio Website">
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <h1>App Location de voiture</h1>
-                        <h2>Gestion de location</h2>
-                        <p>Une liste de voiture et une application de gestion des locations comprenant une fonctionnalité de glisser-déposer, un tri de priorité et un stockage local. Créé à l'aide de JSP (Java Servelet ) et MySQL comme base de donnée.</p>
-                    </div>
-                    <div class="project-img">
-                        <img src="./assets/images/task-managment.webp" alt="Task Manager App">
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-info">
-                        <h1>App Chating</h1>
-                        <h2>Echange de plusieurs message</h2>
-                        <p>Une application chating qui échange plusieurs message des client avec un seul serveur Socket. Développé avec Java pour obtenir des résultats précis.</p>
-                    </div>
-                    <div class="project-img">
-                        <img src="./assets/icons/task.png" alt="Weather Forecast App">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- End Projects Section -->
+    <div class="devops-skills">
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="about container">
-            <div class="col-left">
-                <div class="about-img">
-                    <img src="./assets/icons/Fehycv.jpg" alt="img">
-                </div>
-            </div>
-            <div class="col-right">
-                <h1 class="section-title">A propos de<span> moi</span></h1>
-                <h2>Fullstack Devellopeur</h2>
-                <p>Douleurs et tourments, le fait d’être assis revient à être façonné par l’art. Les aspérités, la force et l’autre nom n’éclairent pas ceux qui sont comblés, et ne repoussent pas la raison de ceux qui, dans la vérité, rejettent et acquièrent davantage. À l’inventeur appartiennent les nécessités qui réclament un exercice accompagné de tous les sens ; tout être retient l’accusation voulue, car ils sont nombreux : les plaintes, les raisons, les bienfaits importants !
-Prompt à souffrir, commode dans le travail, rien n’est agréable à l’oreille guidée ; rien de ce qui nous appartient ne fuit spontanément, et ne détourne du plaisir offert librement !</p>
-                <a href="./assets/cv fehy.pdf" download class="cta">Télécharger le résume</a>
-            </div>
+      <div class="devops-card">
+        <h4>
+          <div class="devops-icon">🐳</div>
+          Docker &amp; Conteneurisation
+        </h4>
+        <p style="color:var(--muted); font-size:0.88rem; margin-bottom:1rem">Création de Dockerfiles, docker-compose pour les environnements multi-services, gestion des images et conteneurs.</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Docker</span><span>65%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:65%"></div></div>
         </div>
-    </section>
-    <!-- End About Section -->
+        <div class="skill-bar-wrap" style="margin-top:8px">
+          <div class="skill-bar-label"><span>Docker Compose</span><span>60%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:60%"></div></div>
+        </div>
+      </div>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="contact container">
-            <div>
-                <h1 class="section-title">Contact <span>info</span></h1>
-            </div>
-            <div class="contact-items">
-                <div class="contact-item">
-                    <div class="icon"><img src="./assets/icons/phone_48px.png" /></div>
-                    <div class="contact-info">
-                        <h1>Téléphone</h1>
-                        <h2>+261 347454871</h2>
-                        <h2>+261 340406562</h2>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="icon"><img src="./assets/icons/mail.png" /></div>
-                    <div class="contact-info">
-                        <h1>Email</h1>
-                        <h2>andriamifehy18@gmail.com</h2>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="icon"><img src="./assets/icons/place_marker_48px.png" /></div>
-                    <div class="contact-info">
-                        <h1>Adresse</h1>
-                        <h2>Andrainjato,Fianarantsoa 301.</h2>
-                    </div>
-                </div>
-            </div>
+      <div class="devops-card">
+        <h4>
+          <div class="devops-icon">⚙️</div>
+          CI/CD — GitHub Actions
+        </h4>
+        <p style="color:var(--muted); font-size:0.88rem; margin-bottom:1rem">Configuration de workflows automatisés : build, tests automatiques, lint et déploiement continu sur push.</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>GitHub Actions</span><span>60%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:60%"></div></div>
         </div>
-    </section>
-    <!-- End Contact Section -->
+        <div class="skill-bar-wrap" style="margin-top:8px">
+          <div class="skill-bar-label"><span>YAML workflows</span><span>65%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:65%"></div></div>
+        </div>
+      </div>
 
-    <!-- Footer -->
-    <section id="footer">
-        <div class="footer container">
-            <div class="brand">
-                <h1><span>F</span>ehy <span>M</span>itantsoa</h1>
-            </div>
-            <h2>Votre site web complet.</h2>
-            <div class="social-icon">
-                <div class="social-item">
-                    <a href="https://www.facebook.com/profile.php?id=61578122212505&sk=about"><img src="./assets/icons/facebook1.png" /></a>
-                </div>
-                <div class="social-item">
-                    <a href="https://fehy-mitantsoa.github.io/portfolio/"><img src="./assets/icons/github.png" /></a>
-                </div>
-                <div class="social-item">
-                    <a href="#"><img src="./assets/icons/insta1.png" /></a>
-                </div>
-                <div class="social-item">
-                    <a href="#"><img src="./assets/icons/youtube.png" /></a>
-                </div>
-            </div>
-            <p>Copyright © 2026 @FehyMitantsoa.</p>
+      <div class="devops-card">
+        <h4>
+          <div class="devops-icon">🐧</div>
+          Linux &amp; Shell Scripting
+        </h4>
+        <p style="color:var(--muted); font-size:0.88rem; margin-bottom:1rem">Administration Linux, scripts Bash pour l'automatisation des tâches, gestion des permissions et des services.</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Linux (Ubuntu/Debian)</span><span>70%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:70%"></div></div>
         </div>
-    </section>
-    <!-- End Footer -->
-    <script src="./index.js"></script>
-    <script src="lightdarkmood.js"></script>
+        <div class="skill-bar-wrap" style="margin-top:8px">
+          <div class="skill-bar-label"><span>Bash Scripting</span><span>60%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:60%"></div></div>
+        </div>
+      </div>
+
+      <div class="devops-card">
+        <h4>
+          <div class="devops-icon">🌿</div>
+          Git &amp; Versioning
+        </h4>
+        <p style="color:var(--muted); font-size:0.88rem; margin-bottom:1rem">Gestion de branches, merge requests, rebasing, gestion des conflits et conventions de commit (Conventional Commits).</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Git</span><span>80%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:80%"></div></div>
+        </div>
+        <div class="skill-bar-wrap" style="margin-top:8px">
+          <div class="skill-bar-label"><span>GitHub / GitLab</span><span>75%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:75%"></div></div>
+        </div>
+      </div>
+
+      <div class="devops-card">
+        <h4>
+          <div class="devops-icon">☁️</div>
+          Déploiement &amp; Hébergement
+        </h4>
+        <p style="color:var(--muted); font-size:0.88rem; margin-bottom:1rem">Déploiement sur VPS (Ubuntu), configuration Nginx comme reverse proxy, certificats SSL avec Certbot.</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>Nginx</span><span>55%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:55%"></div></div>
+        </div>
+        <div class="skill-bar-wrap" style="margin-top:8px">
+          <div class="skill-bar-label"><span>VPS / Serveur</span><span>60%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:60%"></div></div>
+        </div>
+      </div>
+
+      <div class="devops-card">
+        <h4>
+          <div class="devops-icon">📦</div>
+          Gestion des Dépendances
+        </h4>
+        <p style="color:var(--muted); font-size:0.88rem; margin-bottom:1rem">npm, Maven (Java), Composer (PHP) — gestion des paquets, environnements isolés, versioning des dépendances.</p>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-label"><span>npm / yarn</span><span>80%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:80%"></div></div>
+        </div>
+        <div class="skill-bar-wrap" style="margin-top:8px">
+          <div class="skill-bar-label"><span>Maven / Composer</span><span>65%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:65%"></div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-label">À propos</div>
+    <div class="about-grid">
+      <div>
+        <div class="about-photo">
+          <img src="./assets/icons/Fehycv.jpg" alt="Fehy Mitantsoa" onerror="this.style.display='none'; this.parentElement.innerHTML='👨‍💻'">
+        </div>
+      </div>
+      <div class="about-content">
+        <h2>Fehy Mitantsoa</h2>
+        <div class="role">Développeur Fullstack · Bases DevOps</div>
+        <p>Étudiant en informatique à l'École Nationale de l'Informatique (ENI) de Fianarantsoa, Madagascar. Je me passionne pour le développement web moderne et l'automatisation des déploiements.</p>
+        <p>Mon parcours m'a permis de travailler sur des projets concrets — de la conception de bases de données à la mise en ligne d'applications — en passant par des stages au sein d'institutions et d'entreprises locales.</p>
+        <div class="skills-tags">
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">ReactJS</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">PHP / Laravel</span>
+          <span class="skill-tag">React Native</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">GitHub Actions</span>
+        </div>
+        <a href="./assets/cv fehy.pdf" download class="btn btn-primary">Télécharger mon CV →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label">Me contacter</div>
+    <h2 class="section-title">Travaillons <span>ensemble</span></h2>
+    <p class="section-desc">Disponible pour des projets freelance, stages ou opportunités d'emploi.</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">📞</div>
+        <div>
+          <h4>Téléphone</h4>
+          <p>+261 34 74 548 71</p>
+          <p>+261 34 04 065 62 </p>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <div>
+          <h4>Email</h4>
+          <p>andriamifehy18@gmail.com</p>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📍</div>
+        <div>
+          <h4>Adresse</h4>
+          <p>Andrainjato, Fianarantsoa 301</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo"><span>F</span>ehy <span>M</span>itantsoa</div>
+  <div class="social-links">
+    <a href="https://www.facebook.com/profile.php?id=61578122212505" class="social-link" title="Facebook">f</a>
+    <a href="https://fehy-mitantsoa.github.io/portfolio/" class="social-link" title="GitHub">⌥</a>
+  </div>
+  <p class="footer-copy">© 2026 Fehy Mitantsoa. Tous droits réservés.</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileNav').classList.remove('open');
+  }
+
+  // Animate skill bars on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
+          bar.style.width = bar.style.getPropertyValue('--w');
+        });
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.devops-card').forEach(card => observer.observe(card));
+</script>
 </body>
 </html>
